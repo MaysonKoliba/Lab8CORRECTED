@@ -1,0 +1,5 @@
+﻿  AdventuringParty.cpp
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\AdventuringParty.cpp(4,30): error C2995:  'AdventuringParty<character>::AdventuringParty(character *,character *,character *,character *)': function template has already been defined
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\AdventuringParty.h(14): message :  see declaration of 'AdventuringParty<character>::AdventuringParty'
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\AdventuringParty.cpp(17,31): error C2995:  'AdventuringParty<character>::~AdventuringParty(void)': function template has already been defined
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\AdventuringParty.h(16): message :  see declaration of 'AdventuringParty<character>::~AdventuringParty'
