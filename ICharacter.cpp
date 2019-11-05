@@ -13,7 +13,6 @@ ICharacter::ICharacter(IRace* race) {
 	m_race = race;
 };
 
-ICharacter::~ICharacter() {};
 
 int ICharacter::getHitPoint() {
 	return m_race->getHitPoint();
@@ -76,7 +75,7 @@ void Rogue::takeDamage(int damage) {
 	}
 	else if (hit > 0) {
 		cout << hit << " damage done" << endl;
-		this->m_race->HitPointModification(hit);
+		this->m_race->HitPointModification(-hit);
 	}
 
 };
@@ -103,7 +102,7 @@ void Fighter::takeDamage(int damage) {
 	}
 	else if (hit > 0) {
 		cout << hit << " damage done" << endl;
-		this->m_race->HitPointModification(hit);
+		this->m_race->HitPointModification(-hit);
 	}
 
 };
@@ -130,7 +129,7 @@ void Cleric::takeDamage(int damage) {
 	}
 	else if (hit > 0) {
 		cout << hit << " damage done" << endl;
-		this->m_race->HitPointModification(hit);
+		this->m_race->HitPointModification(-hit);
 	}
 
 };

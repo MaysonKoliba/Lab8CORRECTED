@@ -16,6 +16,7 @@ public:
 
 	void checkLead();
 	character* getLead();
+	int checkSize();
 
 private:
 
@@ -24,6 +25,7 @@ private:
 	character* character3;
 	character* character4;
 	vector<character*> party;
+	vector<character*> deleteParty;
 };
 #include "AdventuringParty.cpp" 
 #endif

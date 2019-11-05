@@ -7,7 +7,7 @@ public:
 
 	ICharacter();
 	ICharacter(IRace* race);
-	virtual ~ICharacter();
+	virtual ~ICharacter() {delete m_race;};
 
 	virtual void Attack(ICharacter* enemy) = 0;
 	virtual void takeDamage(int damage) = 0;
@@ -26,7 +26,7 @@ class Wizard : public ICharacter
 public:
 
 	Wizard(IRace* race) { m_race = race; };
-	virtual ~Wizard() {};
+	//virtual ~Wizard() { delete m_race; };
 
 	virtual void Attack(ICharacter* enemy);
 	virtual void takeDamage(int damage);
@@ -40,7 +40,7 @@ class Rogue : public ICharacter
 public:
 
 	Rogue(IRace* race) { m_race = race; };
-	virtual ~Rogue() {};
+	//virtual ~Rogue() { delete m_race; };
 
 	virtual void Attack(ICharacter* enemy);
 	virtual void takeDamage(int damage);
@@ -54,7 +54,7 @@ class Fighter : public ICharacter
 public:
 
 	Fighter(IRace* race) { m_race = race; };
-	virtual ~Fighter() {};
+	//virtual ~Fighter() { delete m_race; };
 
 	virtual void Attack(ICharacter* enemy);
 	virtual void takeDamage(int damage);
@@ -68,7 +68,7 @@ class Cleric : public ICharacter
 public:
 
 	Cleric(IRace* race) { m_race = race; };
-	virtual ~Cleric() {};
+	//virtual ~Cleric() { delete m_race; };
 
 	virtual void Attack(ICharacter* enemy);
 	virtual void takeDamage(int damage);

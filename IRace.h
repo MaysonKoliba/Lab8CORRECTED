@@ -27,7 +27,7 @@ class Human : public IRace
 {
 public:
 
-	Human() : IRace(100, 10, 10) {};
+	Human() : IRace(20, 10, 10) {};
 	virtual ~Human() {};
 
 private:
@@ -38,7 +38,7 @@ class Dwarve : public IRace
 {
 public:
 
-	Dwarve() : IRace(100, 10, 10) {};
+	Dwarve() : IRace(20, 10, 10) {};
 	virtual ~Dwarve() {};
 
 private:
@@ -49,7 +49,7 @@ class Elve : public IRace
 {
 public:
 
-	Elve() : IRace(100, 10, 10) {};
+	Elve() : IRace(20, 10, 10) {};
 	virtual ~Elve() {};
 
 private:
@@ -60,7 +60,7 @@ class Hafling : public IRace
 {
 public:
 
-	Hafling() : IRace(100, 10, 5) {};
+	Hafling() : IRace(20, 10, 5) {};
 	virtual ~Hafling() {};
 
 private:
