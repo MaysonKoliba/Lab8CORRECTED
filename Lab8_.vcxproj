@@ -151,7 +151,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AdventuringParty.cpp" />
     <ClCompile Include="CharacterFactory.cpp" />
     <ClCompile Include="ICharacter.cpp" />
     <ClCompile Include="IRace.cpp" />

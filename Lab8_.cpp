@@ -28,17 +28,24 @@ int main()
 	AdventuringParty<ICharacter> party1(wizard, rogue, fighter, cleric);
 
 
+
+	IRace* race2 = (IRace*) new Dwarve();
+	CharacterFactory factory2;
+
+	ICharacter* char5 = factory2.CreateCharacter(CharacterFactory::WizardType, race2);
+	ICharacter* char6 = factory2.CreateCharacter(CharacterFactory::RogueType, race2);
+	ICharacter* char7 = factory2.CreateCharacter(CharacterFactory::FighterType, race2);
+	ICharacter* char8 = factory2.CreateCharacter(CharacterFactory::ClericType, race2);
+
+	Wizard* wizard2 = dynamic_cast<Wizard*>(char5);
+	Rogue* rogue2 = dynamic_cast<Rogue*>(char6);
+	Fighter* fighter2 = dynamic_cast<Fighter*>(char7);
+	Cleric* cleric2 = dynamic_cast<Cleric*>(char8);
+
+	AdventuringParty<ICharacter> party2(wizard2, rogue2, fighter2, cleric2);
+
+	party1.getLead()->Attack(party2.getLead());
+
+
 	return 0;
-
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

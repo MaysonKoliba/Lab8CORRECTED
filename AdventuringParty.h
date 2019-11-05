@@ -12,8 +12,10 @@ class AdventuringParty
 public:
 
 	AdventuringParty(character* char1, character* char2, character* char3, character* char4);
-
 	~AdventuringParty();
+
+	void checkLead();
+	character* getLead();
 
 private:
 

@@ -15,3 +15,20 @@ AdventuringParty<character>::AdventuringParty(character* char1, character* char2
 
 template<class character>
 AdventuringParty<character>::~AdventuringParty() {};
+
+template<class character>
+void AdventuringParty<character>::checkLead() {
+
+	if (party[0]->getHitPoint() <= 0) {
+		delete party[0];
+
+		cout << "a member of the party has fallen" << endl;
+	}
+
+};
+
+template<class character>
+character* AdventuringParty<character>::getLead(){ 
+
+	return party[0];
+};

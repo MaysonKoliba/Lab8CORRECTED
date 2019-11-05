@@ -8,30 +8,27 @@ public:
 	IRace(int hit, int armor, int bonus);
 	~IRace();
 
-	virtual void HitPointModification();
-	virtual void ArmorClassModification();
-	virtual void HitBonusModification();
+	virtual void HitPointModification(int modification);
+	virtual void ArmorClassModification(int modification);
+	virtual void HitBonusModification(int modification);
 
+	int getHitPoint();
+	int getArmorClass();
+	int getHitBonus();
 
 protected:
 
-	int hitPoint;
+	int hitPoints;
 	int armorClass;
 	int hitBonus;
-
 };
 
 class Human : public IRace
 {
 public:
 
-	Human() : IRace(1, 1, 1) {};
+	Human() : IRace(100, 10, 10) {};
 	virtual ~Human() {};
-
-	virtual void HitPointModification() {};
-	virtual void ArmorClassModification() {};
-	virtual void HitBonusModification() {};
-
 
 private:
 
@@ -41,12 +38,8 @@ class Dwarve : public IRace
 {
 public:
 
+	Dwarve() : IRace(100, 10, 10) {};
 	virtual ~Dwarve() {};
-
-	virtual void HitPointModification() {};
-	virtual void ArmorClassModification() {};
-	virtual void HitBonusModification() {};
-
 
 private:
 
@@ -56,11 +49,8 @@ class Elve : public IRace
 {
 public:
 
+	Elve() : IRace(100, 10, 10) {};
 	virtual ~Elve() {};
-
-	virtual void HitPointModification() {};
-	virtual void ArmorClassModification() {};
-	virtual void HitBonusModification() {};
 
 private:
 
@@ -70,12 +60,8 @@ class Hafling : public IRace
 {
 public:
 
+	Hafling() : IRace(100, 10, 5) {};
 	virtual ~Hafling() {};
-
-	virtual void HitPointModification() {};
-	virtual void ArmorClassModification() {};
-	virtual void HitBonusModification() {};
-
 
 private:
 

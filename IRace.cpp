@@ -2,40 +2,63 @@
 
 IRace::IRace() {
 
-	hitPoint = 0;
+	hitPoints = 0;
 	armorClass = 0;
 	hitBonus = 0;
 };
 
 IRace::IRace(int hit, int armor, int bonus) {
 
-	hitPoint = hit;
+	hitPoints = hit;
 	armorClass = armor;
 	hitBonus = bonus;
 };
 
 IRace::~IRace() {};
 
-void IRace::HitPointModification() {
+void IRace::HitPointModification(int modification) {
 
+	hitPoints = hitPoints + modification;
 };
 
-void IRace::ArmorClassModification() {
+void IRace::ArmorClassModification(int modification) {
 
+	armorClass = armorClass + modification;
 };
 
-void IRace::HitBonusModification() {
+void IRace::HitBonusModification(int modification) {
 
+	hitBonus = hitBonus + modification;
 };
+
+int IRace::getHitPoint() {
+	return hitPoints;
+};
+
+int IRace::getArmorClass() {
+	return armorClass;
+};
+
+int IRace::getHitBonus() {
+	return hitBonus;
+};
+
 
 
 //Human Functions
 
 
+
+
 //Dwarve Functions
+
+
 
 
 //Elve Functions
 
 
-//Haffling Functions
+
+
+//Hafling Functions
+
