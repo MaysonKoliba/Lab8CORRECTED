@@ -16,17 +16,8 @@ AdventuringParty<character>::AdventuringParty(character* char1, character* char2
 template<class character>
 AdventuringParty<character>::~AdventuringParty() {
 
-	if (party.size() == 0) {
-
-		for (int i = 0; i < deleteParty.size(); i++) {
-			delete deleteParty[i];
-		}
-	}
-	else if (party.size() > 0) {
-
-		for (int i = 0; i < party.size(); i++) {
-			delete party[i];
-		}
+	for (int i = 0; i < party.size(); i++) {
+		delete party[i];
 	}
 };
 
@@ -34,17 +25,16 @@ template<class character>
 void AdventuringParty<character>::checkLead() {
 
 	if (party[0]->getHitPoint() <= 0) {
-		deleteParty.push_back(party[0]);
+
+		delete party[0];
 		party.erase(party.begin());
 
 		cout << "*** A member of the oposing party has fallen ***" << endl;
 	}
-
 };
 
 template<class character>
 character* AdventuringParty<character>::getLead(){ 
-
 	return party[0];
 };
 
@@ -54,6 +44,7 @@ int AdventuringParty<character>::checkSize() {
 	if (party.empty()) {
 		return 0;
 	}
+
 	else {
 		return party.size();
 	}

@@ -1,7 +1,14 @@
-﻿  Lab8_.cpp
-C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\AdventuringParty.cpp(21,21): warning C4018:  '<': signed/unsigned mismatch
+﻿  CharacterFactory.cpp
+  ICharacter.cpp
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\ICharacter.cpp(34,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\ICharacter.cpp(61,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\ICharacter.cpp(88,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  IRace.cpp
+  Lab8_.cpp
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\ICharacter.cpp(115,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\AdventuringParty.cpp(19,20): warning C4018:  '<': signed/unsigned mismatch
 C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\AdventuringParty.cpp(17): message :  while compiling class template member function 'AdventuringParty<ICharacter>::~AdventuringParty(void)'
 C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\Lab8_.cpp(32): message :  see reference to function template instantiation 'AdventuringParty<ICharacter>::~AdventuringParty(void)' being compiled
+  Generating Code...
 C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\Lab8_.cpp(32): message :  see reference to class template instantiation 'AdventuringParty<ICharacter>' being compiled
-C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\AdventuringParty.cpp(27,21): warning C4018:  '<': signed/unsigned mismatch
   Lab8_.vcxproj -> C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\Debug\Lab8_.exe

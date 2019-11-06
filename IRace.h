@@ -11,6 +11,7 @@ public:
 	virtual void HitPointModification(int modification);
 	virtual void ArmorClassModification(int modification);
 	virtual void HitBonusModification(int modification);
+	virtual void specialAbility() = 0;
 
 	int getHitPoint();
 	int getArmorClass();
@@ -30,6 +31,8 @@ public:
 	Human() : IRace(20, 10, 10) {};
 	virtual ~Human() {};
 
+	virtual void specialAbility() {};
+
 private:
 
 };
@@ -40,6 +43,8 @@ public:
 
 	Dwarve() : IRace(20, 10, 10) {};
 	virtual ~Dwarve() {};
+
+	virtual void specialAbility() {};
 
 private:
 
@@ -52,6 +57,8 @@ public:
 	Elve() : IRace(20, 10, 10) {};
 	virtual ~Elve() {};
 
+	virtual void specialAbility() {};
+
 private:
 
 };
@@ -62,6 +69,8 @@ public:
 
 	Hafling() : IRace(20, 10, 5) {};
 	virtual ~Hafling() {};
+
+	virtual void specialAbility() {};
 
 private:
 
