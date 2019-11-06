@@ -2,6 +2,7 @@
 #include <iostream>
 using namespace std;
 
+
 IRace::IRace() {
 
 	hitPoints = 0;
@@ -48,7 +49,6 @@ int IRace::getHitBonus() {
 
 
 //Human Functions
-
 void Human::specialAbility() {
 
 	this->hitPoints = this->hitPoints + 10;
@@ -58,7 +58,6 @@ void Human::specialAbility() {
 
 
 //Dwarve Functions
-
 void Dwarve::specialAbility() {
 
 	this->armorClass = this->armorClass + 2;
@@ -68,7 +67,6 @@ void Dwarve::specialAbility() {
 
 
 //Elve Functions
-
 void Elve::specialAbility() {
 
 	this->hitBonus = this->hitBonus + 2;
@@ -78,7 +76,6 @@ void Elve::specialAbility() {
 
 
 //Hafling Functions
-
 void Hafling::specialAbility() {
 
 	this->hitBonus = this->hitBonus + 2;
