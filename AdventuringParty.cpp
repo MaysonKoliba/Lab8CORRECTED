@@ -37,7 +37,7 @@ void AdventuringParty<character>::checkLead() {
 		deleteParty.push_back(party[0]);
 		party.erase(party.begin());
 
-		cout << "a member of the party has fallen" << endl;
+		cout << "*** A member of the oposing party has fallen ***" << endl;
 	}
 
 };

@@ -55,10 +55,32 @@ int main()
 
 	while (party1.checkSize() > 0 && party2.checkSize() > 0) {
 
-		party1.getLead()->Attack(party2.getLead());
-		party2.checkLead();
+		if (party1.checkSize() > 0 && party2.checkSize() > 0) {
 
-		cin.get();
+			cout << "Press enter to have Party1 attack Party2" << endl;
+			cin.get();
+
+			cout << "*** Party1 attack! ***" << endl;
+			party1.getLead()->Attack(party2.getLead());
+			party2.checkLead();
+		}
+
+		if (party1.checkSize() > 0 && party2.checkSize() > 0) {
+			cout << "Press enter to have Party1 attack Party2" << endl;
+			cin.get();
+
+			cout << "*** Party2 attack! ***" << endl;
+			party2.getLead()->Attack(party1.getLead());
+			party1.checkLead();
+		}
+	}
+
+	if (party1.checkSize() != 0) {
+
+		cout << "Party1 won!" << endl;
+	}
+	else {
+		cout << "Party2 won!" << endl;
 	}
 
 
