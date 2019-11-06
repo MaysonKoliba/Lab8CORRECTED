@@ -20,14 +20,14 @@ int main()
 	CharacterFactory factory;
 
 	ICharacter* mayson = factory.CreateCharacter(CharacterFactory::WizardType, race1);
-	ICharacter* fahmy = factory.CreateCharacter(CharacterFactory::RogueType, race2);
-	ICharacter* francesco = factory.CreateCharacter(CharacterFactory::FighterType, race3);
-	ICharacter* person = factory.CreateCharacter(CharacterFactory::ClericType, race4);
+	ICharacter* fahmy = factory.CreateCharacter(CharacterFactory::WizardType, race2);
+	ICharacter* francesco = factory.CreateCharacter(CharacterFactory::WizardType, race3);
+	ICharacter* person = factory.CreateCharacter(CharacterFactory::WizardType, race4);
 
 	Wizard* wizard = dynamic_cast<Wizard*>(mayson);
-	Rogue* rogue = dynamic_cast<Rogue*>(fahmy);
-	Fighter* fighter = dynamic_cast<Fighter*>(francesco);
-	Cleric* cleric = dynamic_cast<Cleric*>(person);
+	Wizard* rogue = dynamic_cast<Wizard*>(fahmy);
+	Wizard* fighter = dynamic_cast<Wizard*>(francesco);
+	Wizard* cleric = dynamic_cast<Wizard*>(person);
 
 	AdventuringParty<ICharacter> party1(wizard, rogue, fighter, cleric);
 
@@ -39,15 +39,15 @@ int main()
 	IRace* race8 = (IRace*) new Human();
 	CharacterFactory factory2;
 
-	ICharacter* char5 = factory2.CreateCharacter(CharacterFactory::WizardType, race5);
+	ICharacter* char5 = factory2.CreateCharacter(CharacterFactory::RogueType, race5);
 	ICharacter* char6 = factory2.CreateCharacter(CharacterFactory::RogueType, race6);
-	ICharacter* char7 = factory2.CreateCharacter(CharacterFactory::FighterType, race7);
-	ICharacter* char8 = factory2.CreateCharacter(CharacterFactory::ClericType, race8);
+	ICharacter* char7 = factory2.CreateCharacter(CharacterFactory::RogueType, race7);
+	ICharacter* char8 = factory2.CreateCharacter(CharacterFactory::RogueType, race8);
 
-	Wizard* wizard2 = dynamic_cast<Wizard*>(char5);
+	Rogue* wizard2 = dynamic_cast<Rogue*>(char5);
 	Rogue* rogue2 = dynamic_cast<Rogue*>(char6);
-	Fighter* fighter2 = dynamic_cast<Fighter*>(char7);
-	Cleric* cleric2 = dynamic_cast<Cleric*>(char8);
+	Rogue* fighter2 = dynamic_cast<Rogue*>(char7);
+	Rogue* cleric2 = dynamic_cast<Rogue*>(char8);
 
 	AdventuringParty<ICharacter> party2(wizard2, rogue2, fighter2, cleric2);
 
@@ -57,7 +57,7 @@ int main()
 
 		if (party1.checkSize() > 0 && party2.checkSize() > 0) {
 
-			cout << "Press enter to have Party1 attack Party2" << endl;
+			cout << endl << "Press enter to have Party1 attack Party2" << endl;
 			cin.get();
 
 			cout << "*** Party1 attack! ***" << endl;
@@ -66,7 +66,7 @@ int main()
 		}
 
 		if (party1.checkSize() > 0 && party2.checkSize() > 0) {
-			cout << "Press enter to have Party1 attack Party2" << endl;
+			cout << endl << "Press enter to have Party1 attack Party2" << endl;
 			cin.get();
 
 			cout << "*** Party2 attack! ***" << endl;

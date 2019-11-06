@@ -13,6 +13,10 @@ public:
 	virtual void specialAttack(ICharacter* enemy) = 0;
 	virtual void takeDamage(int damage) = 0;
 
+	virtual void HitPointModification(int modification);
+	virtual void ArmorClassModification(int modification);
+	virtual void HitBonusModification(int modification);
+
 	int getHitPoint();
 	int getArmorClass();
 	int getHitBonus();
@@ -29,7 +33,7 @@ public:
 	Wizard(IRace* race) { m_race = race; };
 
 	virtual void Attack(ICharacter* enemy);
-	virtual void specialAttack(ICharacter* enemy) {};
+	virtual void specialAttack(ICharacter* enemy);
 	virtual void takeDamage(int damage);
 
 private:
@@ -43,7 +47,7 @@ public:
 	Rogue(IRace* race) { m_race = race; };
 
 	virtual void Attack(ICharacter* enemy);
-	virtual void specialAttack(ICharacter* enemy) {};
+	virtual void specialAttack(ICharacter* enemy);
 	virtual void takeDamage(int damage);
 
 private:

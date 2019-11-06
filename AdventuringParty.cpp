@@ -44,7 +44,6 @@ int AdventuringParty<character>::checkSize() {
 	if (party.empty()) {
 		return 0;
 	}
-
 	else {
 		return party.size();
 	}
