@@ -139,11 +139,11 @@ void Fighter::Attack(ICharacter* enemy) {
 	srand(time(0));
 	int damage = rand() % 20;
 
-	if (damage % 3 == 0) {
+	if (damage % 5 == 0) {
 
 		this->specialAttack(enemy);
 	}
-	else if (damage % 2 == 0) {
+	else if (damage % 4 == 0) {
 
 		this->m_race->specialAbility();
 		damage = damage + this->getHitBonus();
@@ -154,6 +154,15 @@ void Fighter::Attack(ICharacter* enemy) {
 		damage = damage + this->getHitBonus();
 		enemy->takeDamage(damage);
 	}
+};
+
+void Fighter::specialAttack(ICharacter* enemy) {
+
+	enemy->HitBonusModification(-5);
+
+	cout << " --- The Fighter used his special attack by decreeasing his oponent's hit bonus by 5 points and also doing a standard attack! ---" << endl;
+	enemy->takeDamage(10);
+
 };
 
 void Fighter::takeDamage(int damage) {
@@ -177,11 +186,11 @@ void Cleric::Attack(ICharacter* enemy) {
 	srand(time(0));
 	int damage = rand() % 20;
 
-	if (damage % 3 == 0) {
+	if (damage % 5 == 0) {
 
 		this->specialAttack(enemy);
 	}
-	else if (damage % 2 == 0) {
+	else if (damage % 4 == 0) {
 
 		this->m_race->specialAbility();
 		damage = damage + this->getHitBonus();
@@ -192,6 +201,15 @@ void Cleric::Attack(ICharacter* enemy) {
 		damage = damage + this->getHitBonus();
 		enemy->takeDamage(damage);
 	}
+};
+
+void Cleric::specialAttack(ICharacter* enemy) {
+
+	enemy->HitBonusModification(-3);
+	enemy->ArmorClassModification(-3);
+
+	cout << "--- The Cleric used his special attack and decreased his opponent's hit bonus and amor class by 3 points! ---" << endl;
+
 };
 
 void Cleric::takeDamage(int damage) {

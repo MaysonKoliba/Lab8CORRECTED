@@ -61,7 +61,7 @@ public:
 	Fighter(IRace* race) { m_race = race; };
 
 	virtual void Attack(ICharacter* enemy);
-	virtual void specialAttack(ICharacter* enemy) {};
+	virtual void specialAttack(ICharacter* enemy);
 	virtual void takeDamage(int damage);
 
 private:
@@ -75,7 +75,7 @@ public:
 	Cleric(IRace* race) { m_race = race; };
 
 	virtual void Attack(ICharacter* enemy);
-	virtual void specialAttack(ICharacter* enemy) {};
+	virtual void specialAttack(ICharacter* enemy);
 	virtual void takeDamage(int damage);
 
 private:

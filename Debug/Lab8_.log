@@ -2,5 +2,5 @@
 C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\ICharacter.cpp(48,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\ICharacter.cpp(94,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\ICharacter.cpp(139,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\ICharacter.cpp(177,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\ICharacter.cpp(186,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Lab8_.vcxproj -> C:\Users\mayso\Desktop\ThisSemester\DataStructures\Lab8_\Debug\Lab8_.exe
