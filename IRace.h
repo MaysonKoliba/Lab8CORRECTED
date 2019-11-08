@@ -53,7 +53,7 @@ class Dwarve : public IRace
 {
 public:
 
-	Dwarve() : IRace(20, 10, 10) {};
+	Dwarve() : IRace(20, 6, 10) {};
 	virtual ~Dwarve() {};
 
 	virtual void specialAbility();
@@ -67,7 +67,7 @@ class Elve : public IRace
 {
 public:
 
-	Elve() : IRace(20, 10, 10) {};
+	Elve() : IRace(25, 10, 5) {};
 	virtual ~Elve() {};
 
 	virtual void specialAbility();
@@ -81,7 +81,7 @@ class Hafling : public IRace
 {
 public:
 
-	Hafling() : IRace(20, 10, 10) {};
+	Hafling() : IRace(18, 10, 8) {};
 	virtual ~Hafling() {};
 
 	virtual void specialAbility();

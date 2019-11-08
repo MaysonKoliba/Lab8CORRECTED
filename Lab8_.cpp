@@ -19,23 +19,23 @@ int main()
 
 	CharacterFactory factory;
 
-	ICharacter* mayson = factory.CreateCharacter(CharacterFactory::WizardType, race1);
-	ICharacter* fahmy = factory.CreateCharacter(CharacterFactory::FighterType, race2);
-	ICharacter* francesco = factory.CreateCharacter(CharacterFactory::RogueType, race3);
-	ICharacter* person = factory.CreateCharacter(CharacterFactory::ClericType, race4);
+	ICharacter* char1 = factory.CreateCharacter(CharacterFactory::WizardType, race1);
+	ICharacter* char2 = factory.CreateCharacter(CharacterFactory::FighterType, race2);
+	ICharacter* char3 = factory.CreateCharacter(CharacterFactory::RogueType, race3);
+	ICharacter* char4 = factory.CreateCharacter(CharacterFactory::ClericType, race4);
 
-	Wizard* wizard = dynamic_cast<Wizard*>(mayson);
-	Fighter* fighter = dynamic_cast<Fighter*>(fahmy);
-	Rogue* rogue = dynamic_cast<Rogue*>(francesco);
-	Cleric* cleric = dynamic_cast<Cleric*>(person);
+	Wizard* wizard = dynamic_cast<Wizard*>(char1);
+	Fighter* fighter = dynamic_cast<Fighter*>(char2);
+	Rogue* rogue = dynamic_cast<Rogue*>(char3);
+	Cleric* cleric = dynamic_cast<Cleric*>(char4);
 
 	AdventuringParty<ICharacter> party1(wizard, rogue, fighter, cleric);
 
 	//Party 2 Declaration
-	IRace* race5 = (IRace*) new Dwarve();
-	IRace* race6 = (IRace*) new Elve();
+	IRace* race5 = (IRace*) new Elve();
+	IRace* race6 = (IRace*) new Human();
 	IRace* race7 = (IRace*) new Hafling();
-	IRace* race8 = (IRace*) new Human();
+	IRace* race8 = (IRace*) new Dwarve();
 	CharacterFactory factory2;
 
 	ICharacter* char5 = factory2.CreateCharacter(CharacterFactory::WizardType, race5);
@@ -49,6 +49,18 @@ int main()
 	Cleric* cleric2 = dynamic_cast<Cleric*>(char8);
 
 	AdventuringParty<ICharacter> party2(wizard2, rogue2, fighter2, cleric2);
+
+	cout << "*** Party1 consists of... ***" << endl;
+	cout << "<<< A dwarve wizard >>>" << endl;
+	cout << "<<< A dwarve fighter >>>" << endl;
+	cout << "<<< An elve rogue >>>" << endl;
+	cout << "<<< A hafling cleric >>>" << endl << endl;
+
+	cout << "*** Party2 consists of... ***" << endl;
+	cout << "<<< An elve wizard >>>" << endl;
+	cout << "<<< A human rogue >>>" << endl;
+	cout << "<<< A hafling fighter >>>" << endl;
+	cout << "<<< A dwarve cleric >>>" << endl << endl;
 
 
 	//Looping Structure to Play Game 

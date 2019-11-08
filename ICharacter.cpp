@@ -48,11 +48,11 @@ void Wizard::Attack(ICharacter* enemy) {
 	srand(time(0));
 	int damage = rand() % 20;
 
-	if (damage % 3 == 0) {
+	if (damage % 4 == 0) {
 
 		this->specialAttack(enemy);
 	}
-	else if (damage % 2 == 0) {
+	else if (damage % 3 == 0) {
 
 		this->m_race->specialAbility();
 		damage = damage + this->getHitBonus();
@@ -70,7 +70,7 @@ void Wizard::specialAttack(ICharacter* enemy) {
 
 	enemy->ArmorClassModification(-5);
 	
-	cout << " --- The Wizard used his special attack and decreased his opponent's armour class by 5 points! ---" << endl;
+	cout << " --- The Wizard used his special attack and decreased his opponent's armor class by 5 points! ---" << endl;
 };
 
 void Wizard::takeDamage(int damage) {
@@ -94,11 +94,11 @@ void Rogue::Attack(ICharacter* enemy) {
 	srand(time(0));
 	int damage = rand() % 20;
 
-	if (damage % 3 == 0) {
+	if (damage % 4 == 0) {
 
 		this->specialAttack(enemy);
 	}
-	else if (damage % 2 == 0) {
+	else if (damage % 3 == 0) {
 
 		this->m_race->specialAbility();
 		damage = damage + this->getHitBonus();
@@ -139,11 +139,11 @@ void Fighter::Attack(ICharacter* enemy) {
 	srand(time(0));
 	int damage = rand() % 20;
 
-	if (damage % 5 == 0) {
+	if (damage % 4 == 0) {
 
 		this->specialAttack(enemy);
 	}
-	else if (damage % 4 == 0) {
+	else if (damage % 3 == 0) {
 
 		this->m_race->specialAbility();
 		damage = damage + this->getHitBonus();
@@ -186,11 +186,11 @@ void Cleric::Attack(ICharacter* enemy) {
 	srand(time(0));
 	int damage = rand() % 20;
 
-	if (damage % 5 == 0) {
+	if (damage % 4 == 0) {
 
 		this->specialAttack(enemy);
 	}
-	else if (damage % 4 == 0) {
+	else if (damage % 3 == 0) {
 
 		this->m_race->specialAbility();
 		damage = damage + this->getHitBonus();
@@ -208,7 +208,7 @@ void Cleric::specialAttack(ICharacter* enemy) {
 	enemy->HitBonusModification(-3);
 	enemy->ArmorClassModification(-3);
 
-	cout << "--- The Cleric used his special attack and decreased his opponent's hit bonus and amor class by 3 points! ---" << endl;
+	cout << "--- The Cleric used his special attack and decreased his opponent's hit bonus and armor class by 3 points! ---" << endl;
 
 };
 

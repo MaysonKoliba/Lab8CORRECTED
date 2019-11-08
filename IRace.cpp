@@ -22,16 +22,25 @@ IRace::~IRace() {};
 void IRace::HitPointModification(int modification) {
 
 	hitPoints = hitPoints + modification;
+
 };
 
 void IRace::ArmorClassModification(int modification) {
 
 	armorClass = armorClass + modification;
+
+	if (armorClass < 0) {
+		armorClass = 0;
+	}
 };
 
 void IRace::HitBonusModification(int modification) {
 
 	hitBonus = hitBonus + modification;
+
+	if (hitBonus < 0) {
+		hitBonus = 0;
+	}
 };
 
 int IRace::getHitPoint() {
@@ -51,7 +60,7 @@ int IRace::getHitBonus() {
 //Human Functions
 void Human::specialAbility() {
 
-	this->hitPoints = this->hitPoints + 10;
+	this->hitPoints = this->hitPoints + 8;
 
 	cout << "<<< The Human used their special ability to restore 10 of their hit points back! >>>" << endl;
 };
@@ -79,7 +88,7 @@ void Elve::specialAbility() {
 void Hafling::specialAbility() {
 
 	this->hitBonus = this->hitBonus + 2;
-	this->hitPoints = this->hitPoints + 10;
+	this->hitPoints = this->hitPoints + 5;
 
 	cout << "<<< The Hafling used their special ability to increase their hit bonus and hit points! >>>" << endl;
 };
